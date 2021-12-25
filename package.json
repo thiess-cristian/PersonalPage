@@ -1,0 +1,24 @@
+{
+  "name": "PersonalPage",
+  "version": "1.0.0",
+  "description": "## Project setup ``` npm install ```",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss build -i src/style.css -o public/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiess-cristian/PersonalPage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiess-cristian/PersonalPage/issues"
+  },
+  "homepage": "https://github.com/thiess-cristian/PersonalPage#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.19"
+  }
+}
