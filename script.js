@@ -14,11 +14,23 @@ const html = document.querySelector("#html")
 const sun = document.querySelector("#sun")
 const moon = document.querySelector("#moon")
 
+if (document.cookie === "dark") {
+    html.classList.add("dark")
+} else {
+    html.classList.remove("dark")
+}
+
 darkmode_button.addEventListener("click", () => {
     sun.classList.toggle("hidden");
     moon.classList.toggle("hidden");
 
     html.classList.toggle("dark");
+
+    if (html.classList.contains("dark")) {
+        document.cookie = "dark";
+    } else {
+        document.cookie = "";
+    }
 })
 
 
