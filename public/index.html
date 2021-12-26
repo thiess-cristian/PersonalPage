@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark" id="html">
 
 <head>
     <meta charset="UTF-8">
@@ -9,27 +9,45 @@
     <title>Home</title>
 </head>
 
-<body class="text-gray-700 font-poppins">
+<body class="text-gray-700 font-poppins flex flex-col h-screen justify-between dark:bg-gray-800 dark:text-gray-300">
 
-    <header class="text-3xl p-5 border-b-2 flex justify-between">
+    <header class="text-3xl p-5 border-b-2 flex justify-between dark:border-gray-300">
         <div class="col-span-1 font-medium">
             Thiess Cristian
         </div>
+        <div class="flex">
 
-        <div class="p-2 cursor-pointer md:hidden" id="menu-button">
-            <svg class="w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            <div id="darkmode-button" class="p-2 cursor-pointer">
+                <div id="moon" class="hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </div>
+                <div id="sun" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="p-2 cursor-pointer md:hidden" id="menu-button">
+                <svg class="w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
         </div>
     </header>
-    <div id="wrapper" class="md:grid grid-cols-6 ">
+    <div class="md:grid grid-cols-6 mb-auto">
         <nav class="col-span-1">
             <div class="lg:text-lg text-l text-right lg:mr-2">
-                <ul class="md:mt-12 pt-2 hidden md:block border-r-2" id="menu">
+                <ul class="md:mt-12 pt-2 hidden md:block border-r-2 dark:border-gray-300" id="menu">
                     <li class="p-1">
                         <a href="/"
-                            class="hover:shadow-md hover:bg-gray-50 p-1.5 rounded-md mr-1 transition ease-out duration-150 font-semibold">
+                            class="hover:shadow-md hover:bg-gray-50 p-1.5 rounded-md mr-1 transition ease-out duration-200 font-semibold dark:hover:text-gray-900">
                             <span>
                                 Home
                             </span>
@@ -42,7 +60,7 @@
                     </li>
                     <li class="p-1">
                         <a href="./about.html"
-                            class="hover:shadow-md hover:bg-gray-50 p-1.5 rounded-md mr-1 transition ease-out duration-150">
+                            class="hover:shadow-md hover:bg-gray-50 p-1.5 rounded-md mr-1 transition ease-out duration-200 dark:hover:text-gray-900">
                             <span class=>
                                 About
                             </span>
@@ -55,7 +73,7 @@
                     </li>
                     <li class="p-1">
                         <a href="./contact.html"
-                            class="hover:shadow-md hover:bg-gray-50 p-1.5 rounded-md mr-1 transition ease-out duration-150">
+                            class="hover:shadow-md hover:bg-gray-50 p-1.5 rounded-md mr-1 transition ease-out duration-200 dark:hover:text-gray-900">
                             <span>
                                 Contact
                             </span>
@@ -68,7 +86,7 @@
                     </li>
                     <li class="p-1">
                         <a href="./courses.html"
-                            class="hover:shadow-md hover:bg-gray-50 p-1.5 rounded-md mr-1 transition ease-out duration-150">
+                            class="hover:shadow-md hover:bg-gray-50 p-1.5 rounded-md mr-1 transition ease-out duration-200 dark:hover:text-gray-900">
                             <span>
                                 Courses
                             </span>
@@ -88,7 +106,7 @@
 
 
         <main
-            class="lg:col-span-4 md:p-12 p-8 col-span-5 bg-gray-50 md:text-5xl text-xl shadow-md mt-6 mr-6 lg:mr-0 ml-6 lg:ml-0">
+            class="lg:col-span-4 md:p-12 p-8 col-span-5 bg-gray-50 md:text-5xl text-xl shadow-md mt-6 mr-6 lg:mr-0 ml-6 lg:ml-0 dark:bg-gray-900">
             <div class="p-5">
                 <div class="md:pb-12 pb-6 font-poppins font-medium">
                     Hello,
@@ -101,7 +119,7 @@
         </main>
     </div>
 
-    <footer class="mt-96 border-t-2 text-center bg-gray-50 pt-10 pb-10">
+    <footer class=" border-t-2 text-center bg-gray-50 pt-10 pb-10 dark:bg-gray-900 dark:border-gray-300">
 
     </footer>
     <script src="script.js"></script>
