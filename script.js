@@ -1,3 +1,42 @@
+const html = document.querySelector("#html")
+
+function createCookie(name, value, days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        var expires = "; expires=" + date.toGMTString();
+    } else {
+        var expires = "";
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1, c.length);
+        }
+        if (c.indexOf(nameEQ) == 0) {
+            return c.substring(nameEQ.length, c.length);
+        }
+    }
+    return null;
+}
+
+function eraseCookie(name) {
+    createCookie(name, "", -1);
+}
+
+
+if (readCookie("dark") == null) {
+    html.classList.remove("dark")
+} else {
+    html.classList.add("dark")
+}
+
 const menu_button = document.querySelector("#menu-button")
 
 const menu = document.querySelector("#menu");
@@ -9,16 +48,10 @@ menu_button.addEventListener("click", () => {
 
 const darkmode_button = document.querySelector("#darkmode-button")
 
-const html = document.querySelector("#html")
 
 const sun = document.querySelector("#sun")
 const moon = document.querySelector("#moon")
 
-if (document.cookie === "dark") {
-    html.classList.add("dark")
-} else {
-    html.classList.remove("dark")
-}
 
 darkmode_button.addEventListener("click", () => {
     sun.classList.toggle("hidden");
@@ -27,9 +60,9 @@ darkmode_button.addEventListener("click", () => {
     html.classList.toggle("dark");
 
     if (html.classList.contains("dark")) {
-        document.cookie = "dark";
+        createCookie("dark", "dark", 1)
     } else {
-        document.cookie = "";
+        eraseCookie("dark")
     }
 })
 
