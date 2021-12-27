@@ -599,8 +599,8 @@ video {
   grid-column: span 5 / span 5;
 }
 
-.m-2{
-  margin: 0.5rem;
+.m-1{
+  margin: 0.25rem;
 }
 
 .m-7{
@@ -610,6 +610,10 @@ video {
 .mx-9{
   margin-left: 2.25rem;
   margin-right: 2.25rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
 }
 
 .mt-6{
@@ -888,9 +892,9 @@ video {
   background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
 }
 
-.dark .dark\:hover\:bg-gray-200:hover{
+.dark .dark\:hover\:bg-gray-900:hover{
   --tw-bg-opacity: 1;
-  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
 }
 
 .object-cover{
@@ -945,20 +949,20 @@ video {
   padding-top: 0.5rem;
 }
 
+.pt-6{
+  padding-top: 1.5rem;
+}
+
 .pt-7{
   padding-top: 1.75rem;
 }
 
-.pt-10{
-  padding-top: 2.5rem;
+.pb-4{
+  padding-bottom: 1rem;
 }
 
 .pb-6{
   padding-bottom: 1.5rem;
-}
-
-.pb-10{
-  padding-bottom: 2.5rem;
 }
 
 .pl-1{
@@ -1157,6 +1161,10 @@ video {
     display: none;
   }
 
+  .md\:w-96{
+    width: 24rem;
+  }
+
   .md\:p-12{
     padding: 3rem;
   }
@@ -1165,9 +1173,9 @@ video {
     padding-bottom: 3rem;
   }
 
-  .md\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .md\:text-5xl{
@@ -1195,11 +1203,6 @@ video {
 
   .lg\:ml-2{
     margin-left: 0.5rem;
-  }
-
-  .lg\:px-52{
-    padding-left: 13rem;
-    padding-right: 13rem;
   }
 
   .lg\:text-lg{
