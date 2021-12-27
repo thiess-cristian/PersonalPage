@@ -29,12 +29,19 @@ function readCookie(name) {
 function eraseCookie(name) {
     createCookie(name, "", -1);
 }
-
+const sun = document.querySelector("#sun")
+const moon = document.querySelector("#moon")
 
 if (readCookie("dark") == null) {
     html.classList.remove("dark")
+
+    moon.classList.remove("hidden")
+    sun.classList.add("hidden")
 } else {
     html.classList.add("dark")
+
+    moon.classList.add("hidden")
+    sun.classList.remove("hidden")
 }
 
 const menu_button = document.querySelector("#menu-button")
@@ -47,11 +54,6 @@ menu_button.addEventListener("click", () => {
 
 
 const darkmode_button = document.querySelector("#darkmode-button")
-
-
-const sun = document.querySelector("#sun")
-const moon = document.querySelector("#moon")
-
 
 darkmode_button.addEventListener("click", () => {
     sun.classList.toggle("hidden");
